@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="moon.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./bootstrap/bootstrap.css">
+	<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+	<title>Frontend Mentor | Space tourism website</title>
+</head>
+
+<body>
+	<header class="d-flex justify-content-between align-items-center ps-2 py-2 position-relative">
+		<div class="logo">
+			<a href="./home.html"><img class="ms-3" src="./assets/shared/logo.svg" alt="logo"></a>
+		</div>
+		<!-- Navbar-Menu -->
+		<div class="nav d-md-block d-none px-3">
+			<ul class="navbar nav">
+				<li class="position-relative"><a href="./home.html"
+						class="nav-link text-light fw-bolder text-uppercase"><span class="fw-bold">00 </span>Home</a>
+				</li>
+				<li class="active position-relative"><a href="#" class="nav-link text-light fw-bolder text-uppercase"><span
+							class="fw-bold">01
+						</span>Destination</a></li>
+				<li class="position-relative"><a href="./crew-commander.html"
+						class="nav-link text-light fw-bolder text-uppercase"><span class="fw-bold">02 </span>crew</a>
+				</li>
+				<li class="position-relative"><a href="./technology-vehicle.html"
+						class="nav-link text-light fw-bolder text-uppercase"><span class="fw-bold">03
+						</span>technology</a></li>
+			</ul>
+		</div>
+		<!-- Canvas -->
+		<div class="offcanvas offcanvas-end" id="menu">
+			<div class="offcanvas-header">
+				<div class="btn btn-close d-block ms-auto" data-bs-dismiss="offcanvas"></div>
+			</div>
+			<div class="offcanvas-body">
+				<ul class="navbar nav text-start flex-column">
+					<li class="w-100"><a href="./home.html" class="nav-link text-dark fs-1 fw-bolder text-uppercase"><span
+								class="fw-bold">00 </span>Home</a></li>
+					<li class="w-100"><a href="#" class="nav-link text-dark fs-1 fw-bolder text-uppercase"><span
+								class="fw-bold">01
+							</span>Destination</a>
+					</li>
+					<li class="w-100"><a href="./crew-commander.html"
+							class="nav-link text-dark fs-1 fw-bolder text-uppercase"><span class="fw-bold">02 </span>crew</a>
+					</li>
+					<li class="w-100"><a href="./technology-vehicle.html"
+							class="nav-link text-dark fs-1 fw-bolder text-uppercase"><span class="fw-bold">03
+							</span>technology</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- Burger-Icon -->
+		<div class="icon d-md-none d-block me-3" role="button" data-bs-target="#menu" data-bs-toggle="offcanvas">
+			<span class="d-block w-100 bg-light rounded-pill mb-1"></span>
+			<span class="d-block w-75 bg-light ms-auto rounded-pill mb-1"></span>
+			<span class="d-block w-100 bg-light rounded-pill mb-1"></span>
+		</div>
+	</header>
+
+	<div class="container container-parent mt-5 py-5">
+		<p class="text-white fs-4 mb-5 text-start fw-bold text-capitalize"><span class="me-4 opacity-5">01 </span>Pick your destination</p>
+		<div class="container container-child d-flex justify-content-between align-items-center">
+			<div class="preview">
+				<img id="preview-img" class="w-100" src="./assets/destination/image-moon.png" alt="">
+			</div>
+			<div class="info text-light">
+				<ul class="navbar nav options">
+					<li role="button" class="fs-5 position-relative active">Moon</li>
+					<li role="button" class="fs-5 position-relative">Mars</li>
+					<li role="button" class="fs-5 position-relative">Europa</li>
+					<li role="button" class="fs-5 position-relative">Titan</li>
+				</ul>
+				<h1 id="planet-name" class="planet-name">Moon</h1>
+				<p class="describtion">
+					See our planet as you’ve never seen it before. A perfect relaxing trip away to help
+					regain perspective and come back refreshed. While you’re there, take in some history
+					by visiting the Luna 2 and Apollo 11 landing sites.
+				</p>
+				<div class="add-info d-flex justify-content-around">
+					<div>
+						<p class="head fw-bold">Avg. distance</p>
+						<h3 id="d" class="fs-1 serif text-uppercase">384,400 km</h3>
+					</div>
+					<div>
+						<p class="head fw-bold">Est. travel time</p>
+						<h3 id="t" class="fs-1 serif text-uppercase">3 days</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="./bootstrap/bootstrap.js"></script>
+	<script src="./bootstrap/jquery-3.7.0.min.js"></script>
+	<script src="./bootstrap/popper.min.js"></script>
+	<script>
+		const destination = [
+			{
+				"name": "Moon",
+				"images": {
+					"png": "./assets/destination/image-moon.png",
+					"webp": "./assets/destination/image-moon.webp"
+				},
+				"description": "See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.",
+				"distance": "384,400 km",
+				"travel": "3 days"
+			},
+			{
+				"name": "Mars",
+				"images": {
+					"png": "./assets/destination/image-mars.png",
+					"webp": "./assets/destination/image-mars.webp"
+				},
+				"description": "Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!",
+				"distance": "225 mil. km",
+				"travel": "9 months"
+			},
+			{
+				"name": "Europa",
+				"images": {
+					"png": "./assets/destination/image-europa.png",
+					"webp": "./assets/destination/image-europa.webp"
+				},
+				"description": "The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin.",
+				"distance": "628 mil. km",
+				"travel": "3 years"
+			},
+			{
+				"name": "Titan",
+				"images": {
+					"png": "./assets/destination/image-titan.png",
+					"webp": "./assets/destination/image-titan.webp"
+				},
+				"description": "The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.",
+				"distance": "1.6 bil. km",
+				"travel": "7 years"
+			}
+		]
+
+		var lis = document.querySelectorAll('.offcanvas-body ul li');
+		var burger = document.querySelector('[role="button"]');
+		var close = document.querySelector('.btn-close');
+	
+		// Selecting
+		var lisInfo = document.querySelectorAll('ul.options li');
+		let name = document.getElementById('planet-name');
+		let describtion = document.querySelector('.describtion');
+		let distance = document.getElementById('d');
+		let time = document.getElementById('t');
+		let image = document.getElementById('preview-img');
+
+		// Burger Animation
+		burger.addEventListener('click', () => {
+			lis.forEach(li => {
+				setTimeout(() => {
+					li.style.opacity = 1;
+				}, 500)
+			});
+			close.onclick = () => {
+				lis.forEach(li => {
+					li.style.opacity = 0;
+				})
+			};
+		});
+
+		// loop in lis
+		for (let i = 0; i < lisInfo.length; i++) {
+			lisInfo[i].onclick = () => {
+				if (lisInfo[i].classList[2] != 'active') {
+					for (let i = 0; i < lisInfo.length; i++) {
+						lisInfo[i].classList.remove('active');
+					}
+					lisInfo[i].classList.add('active');
+				}
+				if (lisInfo[i].innerHTML === Object.values(destination[i])[0]) {
+					name.innerHTML = Object.values(destination[i])[0];
+					image.setAttribute('src', `${Object.values(Object.values(destination[i])[1])[0]}`);
+					describtion.innerHTML = Object.values(destination[i])[2];
+					distance.innerHTML = Object.values(Object.values(destination[i]))[3];
+					time.innerHTML = Object.values(Object.values(destination[i]))[4];
+				}
+			}
+		}
+	
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+/* global */
+body {
+	font-family: 'Space Grotesk', sans-serif !important;
+	background-image: url(./assets/home/background-home-desktop.jpg);
+	background-size: cover;
+	min-height: 100vh;
+}
+
+header::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 100px;
+	width: 50%;
+	height: 2px;
+	border-radius: 6px;
+	background-color: rgb(255 255 255 / 20%);
+	z-index: -1;
+}
+
+header div.nav {
+	backdrop-filter: blur(12px);
+	background-color: rgb(255 255 255 / 1%);
+}
+
+header .nav ul li:not(.active):hover:before { width: 70%; }
+
+header .nav ul li.active::before{ width: 100%; }
+
+header .nav ul li::before{
+	content: "";
+	position: absolute;
+	bottom: -10px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 0;
+	height: 3px;
+	background-color: white;
+	border-radius: 6px;
+	transition: 0.4s;
+}
+
+header .icon { width: 30px; }
+header .icon span { height: 3px; }
+
+.offcanvas-body ul li {
+	opacity: 0;
+	transition: 0.4s;
+}
+
+/* Landing */
+.landing {	height: calc(100vh - 80px);}
+.landing .text h1 {font-size: 7rem; font-family: serif;}
+.landing p:first-child { letter-spacing: 3px; }
+
+.landing .explore {
+	padding: 7rem 4rem;
+	font-family: serif;
+	transition: 0.4s;
+	outline: 0 solid rgb(255 255 255 / 20%);
+}
+.landing .explore:hover {	outline: 80px solid rgb(255 255 255 / 20%); }
+
+@media (width <= 991px) {
+	.landing .explore {
+		padding: 5rem 2rem;
+	}
+}
+@media (width <= 810px) {
+	body {
+		background-image: url(./assets/home/background-home-tablet.jpg);
+	}
+	header::before {
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	.landing {
+		justify-content: normal !important;
+		margin-top: 2rem;
+		flex-direction: column;
+		text-align: center;
+	}
+}

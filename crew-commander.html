@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="moon.css">
+	<link rel="stylesheet" href="crew.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./bootstrap/bootstrap.css">
+	<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+	<title>Frontend Mentor | Space tourism website</title>
+</head>
+
+<body>
+	<header class="d-flex justify-content-between align-items-center ps-2 py-2 position-relative">
+		<div class="logo">
+			<a href="./home.html"><img class="ms-3" src="./assets/shared/logo.svg" alt="logo"></a>
+		</div>
+		<!-- Navbar-Menu -->
+		<div class="nav d-md-block d-none px-3">
+			<ul class="navbar nav">
+				<li class="position-relative"><a href="./home.html"
+						class="nav-link text-light fw-bolder text-uppercase"><span class="fw-bold">00 </span>Home</a>
+				</li>
+				<li class="position-relative"><a href="./destination-moon.html"
+						class="nav-link text-light fw-bolder text-uppercase"><span class="fw-bold">01
+						</span>Destination</a></li>
+				<li class="position-relative active"><a href="#"
+						class="nav-link text-light fw-bolder text-uppercase"><span class="fw-bold">02 </span>crew</a>
+				</li>
+				<li class="position-relative"><a href="./technology-vehicle.html" class="nav-link text-light fw-bolder text-uppercase"><span
+							class="fw-bold">03
+						</span>technology</a></li>
+			</ul>
+		</div>
+		<!-- Canvas -->
+		<div class="offcanvas offcanvas-end" id="menu">
+			<div class="offcanvas-header">
+				<div class="btn btn-close d-block ms-auto" data-bs-dismiss="offcanvas"></div>
+			</div>
+			<div class="offcanvas-body">
+				<ul class="navbar nav text-start flex-column">
+					<li class="w-100"><a href="./home.html" class="nav-link text-dark fs-1 fw-bolder text-uppercase"><span
+								class="fw-bold">00 </span>Home</a></li>
+					<li class="w-100"><a href="./destination-moon.html"
+							class="nav-link text-dark fs-1 fw-bolder text-uppercase"><span class="fw-bold">01
+							</span>Destination</a>
+					</li>
+					<li class="w-100"><a href="#" class="nav-link text-dark fs-1 fw-bolder text-uppercase"><span
+								class="fw-bold">02 </span>crew</a>
+					</li>
+					<li class="w-100"><a href="./technology-vehicle.html"
+							class="nav-link text-dark fs-1 fw-bolder text-uppercase"><span class="fw-bold">03
+							</span>technology</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- Burger-Icon -->
+		<div class="icon d-md-none d-block me-3" role="button" data-bs-target="#menu" data-bs-toggle="offcanvas">
+			<span class="d-block w-100 bg-light rounded-pill mb-1"></span>
+			<span class="d-block w-75 bg-light ms-auto rounded-pill mb-1"></span>
+			<span class="d-block w-100 bg-light rounded-pill mb-1"></span>
+		</div>
+	</header>
+
+	<div class="container container-parent">
+		<p class="text-white fs-4 text-start fw-bold mb-5 text-capitalize"><span class="me-4 opacity-5">02 </span>Meet Your crew</p>
+		<div class="container container-child d-flex justify-content-between align-items-center">
+			<div class="text mt-5 text-light serif z-index-2 mw-500">
+				<h3 class="rank text-uppercase fs-3 letter-space">Commander</h3>
+				<h1 class="name text-uppercase fs-1 letter-space">Douglas Hurley</h1>
+				<p class="bio sans-serif opacity-5 mt-5">
+					Douglas Gerald Hurley is an American engineer, former Marine Corps pilot
+					and former NASA astronaut. He launched into space for the third time as
+					commander of Crew Dragon Demo-2.
+				</p>
+				<div class="bullets mb-5">
+					<span role="button" class="bullet-active"></span>
+					<span role="button"></span>
+					<span role="button"></span>
+					<span role="button"></span>
+				</div>
+			</div>
+			<div class="preview">
+				<img id="preview-img" class="w-100" src="./assets/crew/image-douglas-hurley.png" alt="">
+			</div>
+		</div>
+	</div>
+
+	<script src="./bootstrap/bootstrap.js"></script>
+	<script src="./bootstrap/jquery-3.7.0.min.js"></script>
+	<script src="./bootstrap/popper.min.js"></script>
+	<script>
+
+		const crew = [
+			{
+				"name": "Douglas Hurley",
+				"images": {
+					"png": "./assets/crew/image-douglas-hurley.png",
+					"webp": "./assets/crew/image-douglas-hurley.webp"
+				},
+				"role": "Commander",
+				"bio": "Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2."
+			},
+			{
+				"name": "Mark Shuttleworth",
+				"images": {
+					"png": "./assets/crew/image-mark-shuttleworth.png",
+					"webp": "./assets/crew/image-mark-shuttleworth.webp"
+				},
+				"role": "Mission Specialist",
+				"bio": "Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind the Linux-based Ubuntu operating system. Shuttleworth became the first South African to travel to space as a space tourist."
+			},
+			{
+				"name": "Victor Glover",
+				"images": {
+					"png": "./assets/crew/image-victor-glover.png",
+					"webp": "./assets/crew/image-victor-glover.webp"
+				},
+				"role": "Pilot",
+				"bio": "Pilot on the first operational flight of the SpaceX Crew Dragon to the International Space Station. Glover is a commander in the U.S. Navy where he pilots an F/A-18.He was a crew member of Expedition 64, and served as a station systems flight engineer."
+			},
+			{
+				"name": "Anousheh Ansari",
+				"images": {
+					"png": "./assets/crew/image-anousheh-ansari.png",
+					"webp": "./assets/crew/image-anousheh-ansari.webp"
+				},
+				"role": "Flight Engineer",
+				"bio": "Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded space tourist, the first self-funded woman to fly to the ISS, and the first Iranian in space."
+			}
+		]
+
+		var lis = document.querySelectorAll('.offcanvas-body ul li');
+		var burger = document.querySelector('[role="button"]');
+		var close = document.querySelector('.btn-close');
+
+		// Burger Animation
+		burger.addEventListener('click', () => {
+			lis.forEach(li => {
+				setTimeout(() => {
+					li.style.opacity = 1;
+				}, 500)
+			});
+			close.onclick = () => {
+				lis.forEach(li => {
+					li.style.opacity = 0;
+				})
+			};
+		});
+
+		let bullets = document.querySelectorAll('.bullets span');
+		let rank = document.querySelector('.rank');
+		let name = document.querySelector('.name');
+		let bio = document.querySelector('.bio');
+		let image = document.getElementById('preview-img');
+
+		// console.log(Object.values(crew[0])[0])
+		for (let i = 0; i < bullets.length; i++) {
+			bullets[i].onclick = (e) => {
+				if (e.currentTarget.classList[0] != 'bullet-active') {
+					bullets.forEach(el => {
+						el.classList.remove('bullet-active');
+					});
+					e.currentTarget.classList.add('bullet-active');
+					name.innerHTML = Object.values(crew[i])[0];
+					image.setAttribute('src', `${Object.values(Object.values(crew[i])[1])[0]}`);
+					rank.innerHTML = Object.values(crew[i])[2];
+					bio.innerHTML = Object.values(Object.values(crew[i]))[3];
+				}
+			}
+		}
+
+	</script>
+</body>
+
+</html>

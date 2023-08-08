@@ -1,0 +1,91 @@
+body {
+	font-family: 'Space Grotesk', sans-serif !important;
+	background-image: url(./assets/technology/background-technology-desktop.jpg);
+	background-size: cover;
+	min-height: 100vh;
+}
+
+header::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 100px;
+	width: 50%;
+	height: 2px;
+	border-radius: 6px;
+	background-color: rgb(255 255 255 / 20%);
+	z-index: -1;
+}
+
+header div.nav {
+	backdrop-filter: blur(12px);
+	background-color: rgb(255 255 255 / 5%);
+}
+
+header .nav ul li:not(.active):hover:before {
+	width: 70%;
+}
+
+header .nav ul li.active::before {
+	width: 100%;
+}
+
+header .nav ul li::before {
+	content: "";
+	position: absolute;
+	bottom: -10px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 0;
+	height: 3px;
+	background-color: white;
+	border-radius: 6px;
+	transition: 0.4s;
+}
+
+header .icon {
+	width: 30px;
+}
+
+header .icon span {
+	height: 3px;
+}
+
+.offcanvas-body ul li {
+	opacity: 0;
+	transition: 0.4s;
+}
+
+.numbering-active {
+	background: rgb(255 255 255) !important;
+	color: rgb(0 0 0) !important;
+}
+
+.numbering span {
+	width: 70px;
+	height: 70px;
+	background: transparent;
+	border: 2px solid white;
+	padding: 1.5rem;
+	transition: 0.4s;
+}
+
+.numbering span:hover {
+	background-color: rgb(255 255 255 / 20%);
+}
+
+@media (width <=1200px) {
+	body {
+		background-image: url(./assets/technology/background-technology-tablet.jpg);
+		text-align: center;
+	}
+	.container-child {
+		flex-direction: column;
+	}
+	.numbering {
+		display: flex;
+	}
+	.info {
+		flex-direction: column-reverse;
+	}
+}

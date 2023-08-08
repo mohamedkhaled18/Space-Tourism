@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="home.css">
+	<link rel="stylesheet" href="./bootstrap/bootstrap.css">
+	<link rel="shortcut icon" href="./assets/favicon-32x32.png" type="image/x-icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Space Tourism</title>
+</head>
+
+<body>
+	<header class="d-flex justify-content-between align-items-center ps-2 py-2 position-relative">
+		<div class="logo">
+			<a href="#"><img class="ms-3" src="./assets/shared/logo.svg" alt="logo"></a>
+		</div>
+		<!-- Navbar-Menu -->
+		<div class="nav d-md-block d-none px-3">
+			<ul class="navbar nav">
+				<li class="active position-relative"><a href="#" class="nav-link text-light fw-bolder text-uppercase"><span class="fw-bold">00 </span>Home</a>
+				</li>
+				<li class="position-relative"><a href="./destination-moon.html" class="nav-link text-light fw-bolder text-uppercase"><span class="fw-bold">01
+						</span>Destination</a></li>
+				<li class="position-relative"><a href="./crew-commander.html" class="nav-link text-light fw-bolder text-uppercase"><span class="fw-bold">02 </span>crew</a>
+				</li>
+				<li class="position-relative"><a href="./technology-vehicle.html" class="nav-link text-light fw-bolder text-uppercase"><span class="fw-bold">03
+						</span>technology</a></li>
+			</ul>
+		</div>
+		<!-- Canvas -->
+		<div class="offcanvas offcanvas-end" id="menu">
+			<div class="offcanvas-header">
+				<div class="btn btn-close d-block ms-auto" data-bs-dismiss="offcanvas"></div>
+			</div>
+			<div class="offcanvas-body">
+				<ul class="navbar nav text-start flex-column">
+					<li class="w-100"><a href="#" class="nav-link text-dark fs-1 fw-bolder text-uppercase"><span
+								class="fw-bold">00 </span>Home</a></li>
+					<li class="w-100"><a href="./destination-moon.html" class="nav-link text-dark fs-1 fw-bolder text-uppercase"><span
+								class="fw-bold">01 </span>Destination</a></li>
+					<li class="w-100"><a href="./crew-commander.html" class="nav-link text-dark fs-1 fw-bolder text-uppercase"><span
+								class="fw-bold">02 </span>crew</a></li>
+					<li class="w-100"><a href="./technology-vehicle.html" class="nav-link text-dark fs-1 fw-bolder text-uppercase"><span
+								class="fw-bold">03 </span>technology</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- Burger-Icon -->
+		<div class="icon d-md-none d-block me-3" role="button" data-bs-target="#menu" data-bs-toggle="offcanvas">
+			<span class="d-block w-100 bg-light rounded-pill mb-1"></span>
+			<span class="d-block w-75 bg-light ms-auto rounded-pill mb-1"></span>
+			<span class="d-block w-100 bg-light rounded-pill mb-1"></span>
+		</div>
+	</header>
+
+	<!-- Landing -->
+<div 
+	class="landing container d-flex justify-content-md-between align-items-center">
+	<div class="text mw-500 text-light">
+		<p class="text-uppercase">SO, You want to travel to</p>
+		<h1>SPACE</h1>
+		<p class="text-capitalize">
+			Let's face it; if you want to go to space,you might as well genuinely go to outer 
+			space and not hover kind of on the edge of it. Well sit back, and relax because
+			we'll give you a truly out of this world experiance!
+		</p>
+	</div>
+	<div role="button"
+		class="explore fs-1 d-flex justify-content-center align-items-center bg-light rounded-circle">
+			<a class="text-dark" href="./destination-moon.html">EXPLORE</a>
+	</div>
+</div>
+
+	<script src="./bootstrap/bootstrap.js"></script>
+	<script src="./bootstrap/jquery-3.7.0.min.js"></script>
+	<script src="./bootstrap/popper.min.js"></script>
+	<script>
+		var lis = document.querySelectorAll('.offcanvas-body ul li');
+		var burger = document.querySelector('[role="button"]');
+		var close = document.querySelector('.btn-close');
+
+		burger.addEventListener('click', () => {
+			lis.forEach(li => {
+				setTimeout(() => {
+					li.style.opacity = 1;
+				}, 500)
+			});
+			close.onclick = () => {
+				lis.forEach(li => {
+					li.style.opacity = 0;
+				})
+			};
+		});
+
+	</script>
+</body>
+
+</html>

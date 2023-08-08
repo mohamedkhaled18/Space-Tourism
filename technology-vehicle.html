@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="tech.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./bootstrap/bootstrap.css">
+	<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+	<title>Frontend Mentor | Space tourism website</title>
+</head>
+
+<body>
+	<header class="d-flex justify-content-between align-items-center ps-2 py-2 position-relative">
+		<div class="logo">
+			<a href="./home.html"><img class="ms-3" src="./assets/shared/logo.svg" alt="logo"></a>
+		</div>
+		<!-- Navbar-Menu -->
+		<div class="nav d-md-block d-none px-3">
+			<ul class="navbar nav">
+				<li class="position-relative"><a href="./home.html"
+						class="nav-link text-light fw-bolder text-uppercase"><span class="fw-bold">00 </span>Home</a>
+				</li>
+				<li class="position-relative"><a href="./destination-moon.html"
+						class="nav-link text-light fw-bolder text-uppercase"><span class="fw-bold">01
+						</span>Destination</a></li>
+				<li class="position-relative"><a href="./crew-commander.html" class="nav-link text-light fw-bolder text-uppercase"><span
+							class="fw-bold">02 </span>crew</a>
+				</li>
+				<li class="position-relative active"><a href="#"
+						class="nav-link text-light fw-bolder text-uppercase"><span class="fw-bold">03
+						</span>technology</a></li>
+			</ul>
+		</div>
+		<!-- Canvas -->
+		<div class="offcanvas offcanvas-end" id="menu">
+			<div class="offcanvas-header">
+				<div class="btn btn-close d-block ms-auto" data-bs-dismiss="offcanvas"></div>
+			</div>
+			<div class="offcanvas-body">
+				<ul class="navbar nav text-start flex-column">
+					<li class="w-100"><a href="./home.html" class="nav-link text-dark fs-1 fw-bolder text-uppercase"><span
+								class="fw-bold">00 </span>Home</a></li>
+					<li class="w-100"><a href="./destination-moon.html"
+							class="nav-link text-dark fs-1 fw-bolder text-uppercase"><span class="fw-bold">01
+							</span>Destination</a>
+					</li>
+					<li class="w-100"><a href="./crew-commander.html" class="nav-link text-dark fs-1 fw-bolder text-uppercase"><span
+								class="fw-bold">02 </span>crew</a>
+					</li>
+					<li class="w-100"><a href="#"
+							class="nav-link text-dark fs-1 fw-bolder text-uppercase"><span class="fw-bold">03
+							</span>technology</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- Burger-Icon -->
+		<div class="icon d-md-none d-block me-3" role="button" data-bs-target="#menu" data-bs-toggle="offcanvas">
+			<span class="d-block w-100 bg-light rounded-pill mb-1"></span>
+			<span class="d-block w-75 bg-light ms-auto rounded-pill mb-1"></span>
+			<span class="d-block w-100 bg-light rounded-pill mb-1"></span>
+		</div>
+	</header>
+
+	<div class="container container-parent">
+		<p class="text-white fw-bold fs-4 text-start text-capitalize"><span class="me-4 opacity-5">03 </span>space launch 101</p>
+		<div class="container container-child d-flex justify-content-between align-items-center">
+			<!-- flex-sm-column-reverse flex-lg-row -->
+			<!-- d-flex flex-lg-column flex-sm-row -->
+			<div
+				class="info mw-500 text-light d-flex  align-items-center">
+				<div class="numbering me-md-5">
+					<span role="button"
+						class="numbering-active fs-4 m-2 mb-5 d-flex justify-content-center align-items-center mb-3 rounded-circle">1</span>
+					<span role="button"
+						class="fs-4 m-2 mb-5 d-flex justify-content-center align-items-center mb-3 rounded-circle">2</span>
+					<span role="button"
+						class="fs-4 m-2 mb-5 d-flex justify-content-center align-items-center mb-3 rounded-circle">3</span>
+				</div>
+				<div class="text">
+					<p class="text-uppercase opacity-5">the terminology...</p>
+					<h1 class="name">Lanuch vehicle</h1>
+					<p class="opacity-5 description">
+						A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation.
+						Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!"
+					</p>
+				</div>
+			</div>
+			<div class="preview">
+				<img id="preview-img" class="w-100 rounded" src="./assets/technology/image-launch-vehicle-portrait.jpg" alt="">
+			</div>
+		</div>
+	</div>
+
+	<script src="./bootstrap/bootstrap.js"></script>
+	<script src="./bootstrap/jquery-3.7.0.min.js"></script>
+	<script src="./bootstrap/popper.min.js"></script>
+	<script>
+
+const technology = [
+	{
+		"name": "Launch vehicle",
+		"images": {
+			"portrait": "./assets/technology/image-launch-vehicle-portrait.jpg",
+			"landscape": "./assets/technology/image-launch-vehicle-landscape.jpg"
+		},
+		"description": "A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!"
+	},
+	{
+		"name": "Spaceport",
+		"images": {
+			"portrait": "./assets/technology/image-spaceport-portrait.jpg",
+			"landscape": "./assets/technology/image-spaceport-landscape.jpg"
+		},
+		"description": "A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by analogy to the seaport for ships or airport for aircraft. Based in the famous Cape Canaveral, our spaceport is ideally situated to take advantage of the Earth’s rotation for launch."
+	},
+	{
+		"name": "Space capsule",
+		"images": {
+			"portrait": "./assets/technology/image-space-capsule-portrait.jpg",
+			"landscape": "./assets/technology/image-space-capsule-landscape.jpg"
+		},
+		"description": "A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained."
+	}
+];
+
+console.table(technology);
+
+		var lis = document.querySelectorAll('.offcanvas-body ul li');
+		var burger = document.querySelector('[role="button"]');
+		var close = document.querySelector('.btn-close');
+
+		// Burger Animation
+		burger.addEventListener('click', () => {
+			lis.forEach(li => {
+				setTimeout(() => {
+					li.style.opacity = 1;
+				}, 500)
+			});
+			close.onclick = () => {
+				lis.forEach(li => {
+					li.style.opacity = 0;
+				})
+			};
+		});
+
+		// Variables
+		let image, nums, description, name ;
+		image = document.getElementById('preview-img');
+		nums = document.querySelectorAll('.info span');
+		description = document.querySelector('.description');
+		name = document.querySelector('.name');
+		
+		for (let i = 0; i < nums.length; i++) {
+			nums[i].onclick = (e) => {
+				nums.forEach(num => {
+					num.classList.remove('numbering-active');
+				});
+				e.currentTarget.classList.add('numbering-active');
+				name.innerHTML = Object.values(technology[i])[0];
+				image.setAttribute('src', `${Object.values(Object.values(technology[i])[1])[0]}`);
+				description.innerHTML = Object.values(technology[i])[2];
+			}
+		}
+	</script>
+</body>
+
+</html>

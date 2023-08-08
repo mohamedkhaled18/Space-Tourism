@@ -1,0 +1,89 @@
+body {
+	font-family: 'Space Grotesk', sans-serif !important;
+	background-image: url(./assets/destination/background-destination-desktop.jpg);
+	background-size: cover;
+	min-height: 100vh;
+}
+
+header::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 100px;
+	width: 50%;
+	height: 2px;
+	border-radius: 6px;
+	background-color: rgb(255 255 255 / 20%);
+	z-index: -1;
+}
+
+header div.nav {
+	backdrop-filter: blur(12px);
+	background-color: rgb(255 255 255 / 5%);
+}
+
+header .nav ul li:not(.active):hover:before { width: 70%; }
+
+header .nav ul li.active::before{ width: 100%; }
+
+header .nav ul li::before{
+	content: "";
+	position: absolute;
+	bottom: -10px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 0;
+	height: 3px;
+	background-color: white;
+	border-radius: 6px;
+	transition: 0.4s;
+}
+
+header .icon { width: 30px; }
+header .icon span { height: 3px; }
+
+.offcanvas-body ul li {
+	opacity: 0;
+	transition: 0.4s;
+}
+
+@media (width <= 1200px) {
+	body {
+		background-image: url(./assets/destination/background-destination-tablet.jpg);
+		text-align: center;
+	}
+	.container-child {
+		flex-direction: column;
+	}
+	.info {
+		margin-top: 2.5rem;
+	}
+}
+
+/* Landing */
+.info { max-width: 550px; }
+.planet-name {
+	font-family: serif;
+	font-size: 5rem !important;
+}
+.planet-name + p { line-height: 2;}
+
+
+.info ul.options li:not(.active):hover:before { width: 100%;left: 0; }
+
+.info ul.options li.active::before{ width: 100%; }
+
+.info ul.options li::before{
+	content: "";
+	position: absolute;
+	bottom: -10px;
+	right: 0;
+	width: 0;
+	height: 3px;
+	background-color: white;
+	border-radius: 6px;
+	transition: 0.4s;
+}
+.info ul.options li:not(ul.options li.active):before {
+	background-color: rgb(255 255 255 / 50%);
+}
